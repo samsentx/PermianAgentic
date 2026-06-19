@@ -1,8 +1,10 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>PermianAgentic</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PermianAgentic</title>
 
 <style>
 body{
@@ -13,7 +15,24 @@ background:linear-gradient(135deg,#f8fafc,#e0f2fe,#ecfeff);
 color:#0f172a;
 }
 
-.hero{padding:58px 22px 35px;}
+.hero{
+padding:50px 20px 35px;
+}
+
+.hero-logo{
+width:520px;
+max-width:90%;
+margin:0 auto 35px;
+display:block;
+filter:drop-shadow(0 25px 45px rgba(0,0,0,.35));
+animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0);}
+}
 
 .title{
 font-size:64px;
@@ -166,12 +185,36 @@ color:#0f172a;
 }
 
 @media(max-width:760px){
-.title{font-size:43px;}
-.subtitle{font-size:24px;}
-.tagline{font-size:21px;}
-.description{font-size:18px;}
-.card{width:86%;padding:26px;}
-.cta{font-size:22px;padding:20px 38px;}
+
+.hero-logo{
+width:280px;
+}
+
+.title{
+font-size:43px;
+}
+
+.subtitle{
+font-size:24px;
+}
+
+.tagline{
+font-size:21px;
+}
+
+.description{
+font-size:18px;
+}
+
+.card{
+width:86%;
+padding:26px;
+}
+
+.cta{
+font-size:22px;
+padding:20px 38px;
+}
 }
 </style>
 </head>
@@ -179,96 +222,100 @@ color:#0f172a;
 <body>
 
 <div class="hero">
-  <div class="title">PermianAgentic</div>
 
-  <div class="subtitle">
-    Agentic AI Platform for SWD Injection Control and Induced Seismic Risk Forecasting
-  </div>
+<img src="image.png" alt="PermianAgentic Logo" class="hero-logo">
 
-  <div class="tagline">
-    Predict • Optimize • Mitigate
-  </div>
+<div class="title">PermianAgentic</div>
 
-  <div class="description">
-    PermianAgentic is an advanced Agentic AI platform designed to forecast induced seismic risk
-    and support proactive SWD injection control across the Permian Basin. The platform integrates
-    b-value analytics, transformer-based forecasting, reinforcement learning, and geomechanical
-    intelligence to identify elevated seismic risk before significant seismic events occur.
-  </div>
+<div class="subtitle">
+Agentic AI Platform for SWD Injection Control and Induced Seismic Risk Forecasting
+</div>
 
-  <button class="cta" onclick="location.href='mailto:info@permianagentic.com'">
-    REQUEST DEMO
-  </button>
+<div class="tagline">
+Predict • Optimize • Mitigate
+</div>
+
+<div class="description">
+PermianAgentic is an advanced Agentic AI platform designed to forecast induced seismic risk and support proactive SWD injection control across the Permian Basin. The platform integrates b-value analytics, transformer-based forecasting, reinforcement learning, and geomechanical intelligence to identify elevated seismic risk before significant seismic events occur.
+</div>
+
+<button class="cta" onclick="location.href='mailto:info@permianagentic.com'">
+REQUEST DEMO
+</button>
+
 </div>
 
 <div class="section">
-  <div class="cards">
+<div class="cards">
 
-    <div class="card">
-      <h2>⚡ B-Value Based Induced Seismic Risk Forecasting</h2>
-      <p>Forecast elevated seismic risk using spatiotemporal b-value patterns.</p>
-      <ul>
-        <li>b-value monitoring and analysis</li>
-        <li>High-risk zone identification</li>
-        <li>Daily seismic risk forecasting</li>
-        <li>Maximum magnitude prediction</li>
-        <li>Early warning intelligence</li>
-      </ul>
-    </div>
+<div class="card">
+<h2>⚡ B-Value Based Induced Seismic Risk Forecasting</h2>
+<p>Forecast elevated seismic risk using spatiotemporal b-value patterns.</p>
+<ul>
+<li>b-value monitoring and analysis</li>
+<li>High-risk zone identification</li>
+<li>Daily seismic risk forecasting</li>
+<li>Maximum magnitude prediction</li>
+<li>Early warning intelligence</li>
+</ul>
+</div>
 
-    <div class="card">
-      <h2>💧 SWD Injection Control</h2>
-      <p>Agentic AI-driven optimization of saltwater disposal operations.</p>
-      <ul>
-        <li>Adaptive injection recommendations</li>
-        <li>Risk-aware injection allocation</li>
-        <li>Dynamic operational control</li>
-        <li>Basin-scale optimization</li>
-      </ul>
-    </div>
+<div class="card">
+<h2>💧 SWD Injection Control</h2>
+<p>Agentic AI-driven optimization of saltwater disposal operations.</p>
+<ul>
+<li>Adaptive injection recommendations</li>
+<li>Risk-aware injection allocation</li>
+<li>Dynamic operational control</li>
+<li>Basin-scale optimization</li>
+</ul>
+</div>
 
-    <div class="card">
-      <h2>🛡️ Seismic Risk Mitigation</h2>
-      <p>Support proactive operational decisions to reduce induced seismicity risk.</p>
-      <ul>
-        <li>Risk-based injection adjustments</li>
-        <li>Decision-support recommendations</li>
-        <li>Critical zone monitoring</li>
-        <li>Operational mitigation strategies</li>
-      </ul>
-    </div>
+<div class="card">
+<h2>🛡️ Seismic Risk Mitigation</h2>
+<p>Support proactive operational decisions to reduce induced seismicity risk.</p>
+<ul>
+<li>Risk-based injection adjustments</li>
+<li>Decision-support recommendations</li>
+<li>Critical zone monitoring</li>
+<li>Operational mitigation strategies</li>
+</ul>
+</div>
 
-    <div class="card">
-      <h2>🧠 Agentic AI Engine</h2>
-      <p>Advanced AI framework for prediction and decision support.</p>
-      <ul>
-        <li>Transformer Models</li>
-        <li>Reinforcement Learning</li>
-        <li>Geomechanical Analytics</li>
-        <li>Real-Time Intelligence</li>
-      </ul>
-    </div>
+<div class="card">
+<h2>🧠 Agentic AI Engine</h2>
+<p>Advanced AI framework for prediction and decision support.</p>
+<ul>
+<li>Transformer Models</li>
+<li>Reinforcement Learning</li>
+<li>Geomechanical Analytics</li>
+<li>Real-Time Intelligence</li>
+</ul>
+</div>
 
-  </div>
+</div>
 
-  <div class="powered">
-    <h2>Powered By</h2>
-    <span>Agentic AI</span>
-    <span>b-Value Analytics</span>
-    <span>Reinforcement Learning</span>
-    <span>Transformer Models</span>
-    <span>Geomechanics Intelligence</span>
-  </div>
+<div class="powered">
+<h2>Powered By</h2>
+<span>Agentic AI</span>
+<span>b-Value Analytics</span>
+<span>Reinforcement Learning</span>
+<span>Transformer Models</span>
+<span>Geomechanics Intelligence</span>
+</div>
 </div>
 
 <div class="footer">
-  <a href="about.html">About</a>
-  <a href="platform.html">Platform</a>
-  <a href="contact.html">Contact</a>
-  <a href="legal.html">Legal</a>
+<a href="about.html">About</a>
+<a href="platform.html">Platform</a>
+<a href="contact.html">Contact</a>
+<a href="legal.html">Legal</a>
 </div>
 
-<div class="copy">© 2026 PermianAgentic. All Rights Reserved.</div>
+<div class="copy">
+© 2026 PermianAgentic. All Rights Reserved.
+</div>
 
 </body>
 </html>
+```
