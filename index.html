@@ -237,4 +237,292 @@ selected.scrollIntoView({behavior:'smooth'});
 </script>
 
 </body>
+</html>  Productıon Data dan sonra SWD Injection Data olsun ve altinda Shalow and Deep Injection butonlari eklensin, Seismic Intelligence yerine Induced Seismicity Intelligence olsun Agentic AI Control yerine Agentic AI SWD Control olsun, Daha alta  Endustry Report Request olsun ve aldinda Lease Area Seismic Risk Report  ve SWD Injection Control Report olsun, About yerine About US olsun Directors eklensin 
+
+Birkaç saniye düşündüm
+Aşağıdaki düzeltilmiş tam index.html kodu:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+text-align:center;
+background:linear-gradient(135deg,#f8fafc,#e0f2fe,#ecfeff);
+color:#0f172a;
+}
+
+.hero{
+padding:40px 20px 20px;
+}
+
+.hero-logo{
+width:1200px;
+max-width:95%;
+margin:0 auto;
+display:block;
+filter:drop-shadow(0 20px 40px rgba(0,0,0,.25));
+}
+
+.section{
+margin:35px auto;
+max-width:1120px;
+padding:0 24px;
+}
+
+.section-title{
+font-size:38px;
+font-weight:900;
+color:#0f172a;
+margin:45px 0 22px;
+}
+
+.button-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+margin:20px auto 35px;
+}
+
+.btn{
+padding:18px 30px;
+font-size:21px;
+font-weight:900;
+border:none;
+border-radius:18px;
+background:#0f766e;
+color:white;
+cursor:pointer;
+box-shadow:0 12px 25px rgba(0,0,0,.18);
+}
+
+.btn:hover{
+background:#115e59;
+transform:translateY(-2px);
+}
+
+.control-btn{
+font-size:24px;
+padding:22px 42px;
+background:#0f172a;
+}
+
+.control-btn:hover{
+background:#1e293b;
+}
+
+.report-btn{
+background:#7c2d12;
+}
+
+.report-btn:hover{
+background:#9a3412;
+}
+
+.image-box{
+display:none;
+margin:25px auto 45px;
+max-width:1050px;
+background:white;
+padding:22px;
+border-radius:24px;
+box-shadow:0 16px 38px rgba(0,0,0,.14);
+}
+
+.image-box img{
+width:100%;
+max-width:1000px;
+border-radius:18px;
+}
+
+.image-box h2{
+color:#0f766e;
+font-size:30px;
+}
+
+.footer{
+margin-top:55px;
+padding:30px;
+border-top:1px solid #cbd5e1;
+display:flex;
+justify-content:center;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.footer a{
+padding:14px 28px;
+font-size:20px;
+font-weight:900;
+color:#0f766e;
+text-decoration:none;
+border-radius:14px;
+background:#fff;
+border:2px solid #0f172a;
+}
+
+.copy{
+padding:32px;
+font-size:20px;
+font-weight:900;
+color:#0f172a;
+}
+
+@media(max-width:760px){
+.hero-logo{
+width:95%;
+}
+
+.section-title{
+font-size:31px;
+}
+
+.btn{
+width:90%;
+font-size:19px;
+}
+
+.control-btn{
+font-size:21px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<img src="image.png?v=20260620" alt="PermianAgentic Logo" class="hero-logo">
+</div>
+
+<div class="section">
+
+<h1 class="section-title">Production Data</h1>
+
+<div class="button-grid">
+<button class="btn" onclick="showImage('oil')">Oil Production</button>
+<button class="btn" onclick="showImage('gas')">Gas Production</button>
+<button class="btn" onclick="showImage('water')">Water Production</button>
+<button class="btn" onclick="showImage('rig')">Rig Count</button>
+</div>
+
+<h1 class="section-title">SWD Injection Data</h1>
+
+<div class="button-grid">
+<button class="btn" onclick="showImage('shallow')">Shallow Injection</button>
+<button class="btn" onclick="showImage('deep')">Deep Injection</button>
+</div>
+
+<h1 class="section-title">Induced Seismicity Intelligence</h1>
+
+<div class="button-grid">
+<button class="btn" onclick="showImage('seismic')">Seismic Map</button>
+<button class="btn" onclick="showImage('bvalue')">B-Value Risk Map</button>
+<button class="btn" onclick="showImage('forecast')">Seismicity Forecast</button>
+</div>
+
+<h1 class="section-title">Agentic AI SWD Control</h1>
+
+<div class="button-grid">
+<button class="btn control-btn" onclick="showImage('injection')">ProActive Injection Control</button>
+</div>
+
+<h1 class="section-title">Industry Report Request</h1>
+
+<div class="button-grid">
+<button class="btn report-btn" onclick="showImage('lease-report')">Lease Area Seismic Risk Report</button>
+<button class="btn report-btn" onclick="showImage('swd-report')">SWD Injection Control Report</button>
+</div>
+
+<div id="oil" class="image-box">
+<h2>Oil Production</h2>
+<img src="oil.png" alt="Oil Production">
+</div>
+
+<div id="gas" class="image-box">
+<h2>Gas Production</h2>
+<img src="gas.png" alt="Gas Production">
+</div>
+
+<div id="water" class="image-box">
+<h2>Water Production</h2>
+<img src="water.png" alt="Water Production">
+</div>
+
+<div id="rig" class="image-box">
+<h2>Rig Count</h2>
+<img src="rig.png" alt="Rig Count">
+</div>
+
+<div id="shallow" class="image-box">
+<h2>Shallow Injection</h2>
+<img src="shallow-injection.png" alt="Shallow Injection">
+</div>
+
+<div id="deep" class="image-box">
+<h2>Deep Injection</h2>
+<img src="deep-injection.png" alt="Deep Injection">
+</div>
+
+<div id="seismic" class="image-box">
+<h2>Seismic Map</h2>
+<img src="seismic-map.png" alt="Seismic Map">
+</div>
+
+<div id="bvalue" class="image-box">
+<h2>B-Value Risk Map</h2>
+<img src="bvalue-risk.png" alt="B-Value Risk Map">
+</div>
+
+<div id="forecast" class="image-box">
+<h2>Seismicity Forecast</h2>
+<img src="seismicity-forecast.png" alt="Seismicity Forecast">
+</div>
+
+<div id="injection" class="image-box">
+<h2>ProActive Injection Control</h2>
+<img src="injection-control.png" alt="ProActive Injection Control">
+</div>
+
+<div id="lease-report" class="image-box">
+<h2>Lease Area Seismic Risk Report</h2>
+<img src="lease-area-seismic-risk-report.png" alt="Lease Area Seismic Risk Report">
+</div>
+
+<div id="swd-report" class="image-box">
+<h2>SWD Injection Control Report</h2>
+<img src="swd-injection-control-report.png" alt="SWD Injection Control Report">
+</div>
+
+</div>
+
+<div class="footer">
+<a href="about.html">About Us</a>
+<a href="directors.html">Directors</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div class="copy">
+© 2026 PermianAgentic. All Rights Reserved.
+</div>
+
+<script>
+function showImage(id){
+const boxes=document.querySelectorAll('.image-box');
+boxes.forEach(box=>box.style.display='none');
+
+const selected=document.getElementById(id);
+selected.style.display='block';
+selected.scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</body>
 </html>
+
