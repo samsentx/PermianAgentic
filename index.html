@@ -4,86 +4,96 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <style>
 body{
 margin:0;
 font-family:Arial,sans-serif;
 text-align:center;
-background:linear-gradient(135deg,#f8fafc,#e0f2fe,#ecfeff);
+background:#f8fafc;
 color:#0f172a;
 }
 
 .hero{
-padding:40px 20px 5px;
+padding:30px 20px 5px;
 }
 
 .hero-logo{
-width:1200px;
+width:1100px;
 max-width:95%;
 margin:0 auto;
 display:block;
-filter:drop-shadow(0 20px 40px rgba(0,0,0,.25));
+filter:drop-shadow(0 16px 32px rgba(0,0,0,.25));
 }
 
 .section{
-margin:0 auto 35px;
 max-width:1120px;
-padding:0 24px;
+margin:0 auto;
+padding:0 22px;
 }
 
 .section-title{
-font-size:38px;
+font-size:42px;
 font-weight:900;
-color:#0f172a;
-margin:34px 0 22px;
+color:#ff3131;
+margin:32px 0 18px;
+letter-spacing:1px;
 }
 
-.button-grid{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+.card-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
 gap:18px;
-margin:20px auto 35px;
+margin:0 auto 32px;
 }
 
-.btn{
-padding:18px 30px;
+.card{
+background:white;
+border:none;
+border-radius:22px;
+padding:28px 14px 22px;
+cursor:pointer;
+box-shadow:0 8px 22px rgba(0,0,0,.18);
+transition:.2s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 14px 30px rgba(0,0,0,.24);
+}
+
+.icon{
+font-size:58px;
+margin-bottom:14px;
+}
+
+.card-title{
 font-size:21px;
 font-weight:900;
-border:none;
-border-radius:18px;
-background:#0f766e;
-color:white;
-cursor:pointer;
-box-shadow:0 12px 25px rgba(0,0,0,.18);
+color:#000;
+line-height:1.15;
 }
 
-.btn:hover{
-background:#115e59;
-transform:translateY(-2px);
-}
+.oil{color:#16a34a;}
+.gas{color:#f59e0b;}
+.water{color:#2563eb;}
+.rig{color:#dc2626;}
 
-.control-btn{
-font-size:24px;
-padding:22px 42px;
-background:#0f172a;
-}
+.swd{color:#ef4444;}
+.deep{color:#2563eb;}
+.shallow{color:#16a34a;}
+.trend{color:#f97316;}
 
-.control-btn:hover{
-background:#1e293b;
-}
-
-.report-btn{
-background:#7c2d12;
-}
-
-.report-btn:hover{
-background:#9a3412;
-}
+.seismic{color:#dc2626;}
+.risk{color:#e11d48;}
+.forecast{color:#3b82f6;}
+.ai{color:#0f172a;}
+.report{color:#7c3aed;}
 
 .image-box{
 display:none;
-margin:25px auto 45px;
+margin:20px auto 40px;
 max-width:1050px;
 background:white;
 padding:22px;
@@ -103,23 +113,27 @@ font-size:30px;
 }
 
 .footer{
-margin-top:38px;
-padding:16px 30px 18px;
+margin-top:28px;
+padding:26px 20px;
+background:#e5e7eb;
 display:flex;
 justify-content:center;
-gap:14px;
+gap:38px;
 flex-wrap:wrap;
 }
 
 .footer a{
-padding:14px 28px;
-font-size:20px;
+font-size:22px;
 font-weight:900;
-color:#0f766e;
+color:#000;
 text-decoration:none;
-border-radius:14px;
-background:#fff;
-border:2px solid #0f172a;
+}
+
+.footer i{
+display:block;
+font-size:42px;
+color:#1e88ff;
+margin-bottom:8px;
 }
 
 .copy{
@@ -127,24 +141,43 @@ padding:24px;
 font-size:18px;
 font-weight:900;
 color:#0f172a;
+background:white;
 }
 
-@media(max-width:760px){
-.hero-logo{
-width:95%;
+@media(max-width:900px){
+.card-grid{
+grid-template-columns:repeat(2,1fr);
+}
 }
 
+@media(max-width:560px){
 .section-title{
-font-size:31px;
+font-size:34px;
 }
 
-.btn{
-width:90%;
-font-size:19px;
+.card-grid{
+grid-template-columns:repeat(2,1fr);
+gap:12px;
 }
 
-.control-btn{
-font-size:21px;
+.card{
+padding:22px 8px 18px;
+}
+
+.card-title{
+font-size:18px;
+}
+
+.icon{
+font-size:48px;
+}
+
+.footer{
+gap:24px;
+}
+
+.footer a{
+font-size:18px;
 }
 }
 </style>
@@ -160,41 +193,88 @@ font-size:21px;
 
 <h1 class="section-title">Production Data</h1>
 
-<div class="button-grid">
-<button class="btn" onclick="showImage('oil')">Oil Production</button>
-<button class="btn" onclick="showImage('gas')">Gas Production</button>
-<button class="btn" onclick="showImage('water')">Water Production</button>
-<button class="btn" onclick="showImage('rig')">Rig Count</button>
+<div class="card-grid">
+<button class="card" onclick="showImage('oil')">
+<i class="fa-solid fa-oil-well icon oil"></i>
+<div class="card-title">Oil Production</div>
+</button>
+
+<button class="card" onclick="showImage('gas')">
+<i class="fa-solid fa-fire-flame-curved icon gas"></i>
+<div class="card-title">Gas Production</div>
+</button>
+
+<button class="card" onclick="showImage('water')">
+<i class="fa-solid fa-droplet icon water"></i>
+<div class="card-title">Water Production</div>
+</button>
+
+<button class="card" onclick="showImage('rig')">
+<i class="fa-solid fa-industry icon rig"></i>
+<div class="card-title">Rig Count</div>
+</button>
 </div>
 
 <h1 class="section-title">SWD Injection Data</h1>
 
-<div class="button-grid">
-<button class="btn" onclick="showImage('totalswd')">Total SWD Injection</button>
-<button class="btn" onclick="showImage('deep')">Deep Injection</button>
-<button class="btn" onclick="showImage('shallow')">Shallow Injection</button>
-<button class="btn" onclick="showImage('trend')">Injection Trend</button>
+<div class="card-grid">
+<button class="card" onclick="showImage('totalswd')">
+<i class="fa-solid fa-database icon swd"></i>
+<div class="card-title">Total SWD Injection</div>
+</button>
+
+<button class="card" onclick="showImage('deep')">
+<i class="fa-solid fa-arrow-down-long icon deep"></i>
+<div class="card-title">Deep Injection</div>
+</button>
+
+<button class="card" onclick="showImage('shallow')">
+<i class="fa-solid fa-arrow-up-long icon shallow"></i>
+<div class="card-title">Shallow Injection</div>
+</button>
+
+<button class="card" onclick="showImage('trend')">
+<i class="fa-solid fa-chart-line icon trend"></i>
+<div class="card-title">Injection Trend</div>
+</button>
 </div>
 
 <h1 class="section-title">Induced Seismicity Intelligence</h1>
 
-<div class="button-grid">
-<button class="btn" onclick="showImage('seismic')">Seismicity Map</button>
-<button class="btn" onclick="showImage('bvalue')">B-Value Risk Map</button>
-<button class="btn" onclick="showImage('forecast')">Seismicity Forecast</button>
-</div>
+<div class="card-grid">
+<button class="card" onclick="showImage('seismic')">
+<i class="fa-solid fa-earth-americas icon seismic"></i>
+<div class="card-title">Seismicity Map</div>
+</button>
 
-<h1 class="section-title">Agentic AI SWD Control</h1>
+<button class="card" onclick="showImage('bvalue')">
+<i class="fa-solid fa-bullseye icon risk"></i>
+<div class="card-title">B-Value Risk Map</div>
+</button>
 
-<div class="button-grid">
-<button class="btn control-btn" onclick="showImage('injection')">ProActive Injection Control</button>
+<button class="card" onclick="showImage('forecast')">
+<i class="fa-solid fa-wave-square icon forecast"></i>
+<div class="card-title">Seismicity Forecast</div>
+</button>
+
+<button class="card" onclick="showImage('injection')">
+<i class="fa-solid fa-robot icon ai"></i>
+<div class="card-title">AI SWD Control</div>
+</button>
 </div>
 
 <h1 class="section-title">Industry Report Request</h1>
 
-<div class="button-grid">
-<button class="btn report-btn" onclick="showImage('lease-report')">Lease Area Seismic Risk Report</button>
-<button class="btn report-btn" onclick="showImage('optimization-report')">SWD Injection Optimization Report</button>
+<div class="card-grid">
+<button class="card" onclick="showImage('lease-report')">
+<i class="fa-solid fa-file-waveform icon report"></i>
+<div class="card-title">Lease Area Seismic Risk Report</div>
+</button>
+
+<button class="card" onclick="showImage('optimization-report')">
+<i class="fa-solid fa-file-contract icon report"></i>
+<div class="card-title">SWD Injection Optimization Report</div>
+</button>
 </div>
 
 <div id="oil" class="image-box">
@@ -253,8 +333,8 @@ font-size:21px;
 </div>
 
 <div id="injection" class="image-box">
-<h2>ProActive Injection Control</h2>
-<img src="injection-control.png" alt="ProActive Injection Control">
+<h2>Agentic AI SWD Control</h2>
+<img src="injection-control.png" alt="Agentic AI SWD Control">
 </div>
 
 <div id="lease-report" class="image-box">
@@ -270,9 +350,11 @@ font-size:21px;
 </div>
 
 <div class="footer">
-<a href="about.html">About Us</a>
-<a href="directors.html">Directors</a>
-<a href="contact.html">Contact</a>
+<a href="model.html"><i class="fa-solid fa-brain"></i>Model</a>
+<a href="method.html"><i class="fa-solid fa-book"></i>Method</a>
+<a href="about.html"><i class="fa-solid fa-users"></i>About Us</a>
+<a href="directors.html"><i class="fa-solid fa-user-tie"></i>Directors</a>
+<a href="contact.html"><i class="fa-solid fa-envelope"></i>Contact</a>
 </div>
 
 <div class="copy">
