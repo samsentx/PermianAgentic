@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
 body{
 margin:0;
 font-family:Arial,sans-serif;
@@ -27,48 +26,72 @@ filter:drop-shadow(0 20px 40px rgba(0,0,0,.25));
 }
 
 .section{
-margin:20px auto;
+margin:35px auto;
 max-width:1120px;
 padding:0 24px;
 }
 
-.cards{
+.section-title{
+font-size:38px;
+font-weight:900;
+color:#0f172a;
+margin:45px 0 22px;
+}
+
+.button-grid{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:24px;
+gap:18px;
+margin:20px auto 35px;
 }
 
-.card{
-width:435px;
-padding:32px;
-border-radius:24px;
-background:rgba(255,255,255,.80);
-backdrop-filter:blur(12px);
-box-shadow:0 16px 38px rgba(0,0,0,.13);
-text-align:left;
+.btn{
+padding:18px 30px;
+font-size:21px;
+font-weight:900;
+border:none;
+border-radius:18px;
+background:#0f766e;
+color:white;
+cursor:pointer;
+box-shadow:0 12px 25px rgba(0,0,0,.18);
 }
 
-.card h2{
+.btn:hover{
+background:#115e59;
+transform:translateY(-2px);
+}
+
+.control-btn{
 font-size:24px;
+padding:22px 42px;
+background:#0f172a;
+}
+
+.control-btn:hover{
+background:#1e293b;
+}
+
+.image-box{
+display:none;
+margin:25px auto 45px;
+max-width:1050px;
+background:white;
+padding:22px;
+border-radius:24px;
+box-shadow:0 16px 38px rgba(0,0,0,.14);
+}
+
+.image-box img{
+width:100%;
+max-width:1000px;
+border-radius:18px;
+}
+
+.image-box h2{
 color:#0f766e;
-text-align:center;
-margin-top:0;
-}
-
-.card p{
-font-size:19px;
-font-weight:700;
-color:#475569;
-line-height:1.45;
-text-align:center;
-}
-
-.card ul{
-font-size:18px;
-font-weight:700;
-color:#334155;
-line-height:1.7;
+font-size:30px;
 }
 
 .footer{
@@ -100,19 +123,23 @@ color:#0f172a;
 }
 
 @media(max-width:760px){
-
 .hero-logo{
 width:95%;
-max-width:95%;
 }
 
-.card{
-width:86%;
-padding:26px;
+.section-title{
+font-size:31px;
 }
 
+.btn{
+width:90%;
+font-size:19px;
 }
 
+.control-btn{
+font-size:21px;
+}
+}
 </style>
 </head>
 
@@ -124,67 +151,90 @@ padding:26px;
 
 <div class="section">
 
-<div class="cards">
+<h1 class="section-title">Production Data</h1>
 
-<div class="card">
-<h2>⚡ B-Value Based Induced Seismic Risk Forecasting</h2>
-<p>Forecast elevated seismic risk using spatiotemporal b-value patterns.</p>
-<ul>
-<li>b-value monitoring and analysis</li>
-<li>High-risk zone identification</li>
-<li>Daily seismic risk forecasting</li>
-<li>Maximum magnitude prediction</li>
-<li>Early warning intelligence</li>
-</ul>
+<div class="button-grid">
+<button class="btn" onclick="showImage('oil')">Oil Production</button>
+<button class="btn" onclick="showImage('gas')">Gas Production</button>
+<button class="btn" onclick="showImage('water')">Water Production</button>
+<button class="btn" onclick="showImage('rig')">Rig Count</button>
 </div>
 
-<div class="card">
-<h2>💧 SWD Injection Control</h2>
-<p>Agentic AI-driven optimization of saltwater disposal operations.</p>
-<ul>
-<li>Adaptive injection recommendations</li>
-<li>Risk-aware injection allocation</li>
-<li>Dynamic operational control</li>
-<li>Basin-scale optimization</li>
-</ul>
+<h1 class="section-title">Seismic Intelligence</h1>
+
+<div class="button-grid">
+<button class="btn" onclick="showImage('seismic')">Seismic Map</button>
+<button class="btn" onclick="showImage('bvalue')">B-Value Risk Map</button>
+<button class="btn" onclick="showImage('forecast')">Seismicity Forecast</button>
 </div>
 
-<div class="card">
-<h2>🛡️ Seismic Risk Mitigation</h2>
-<p>Support proactive operational decisions to reduce induced seismicity risk.</p>
-<ul>
-<li>Risk-based injection adjustments</li>
-<li>Decision-support recommendations</li>
-<li>Critical zone monitoring</li>
-<li>Operational mitigation strategies</li>
-</ul>
+<h1 class="section-title">Agentic AI Control</h1>
+
+<div class="button-grid">
+<button class="btn control-btn" onclick="showImage('injection')">ProActive Injection Control</button>
 </div>
 
-<div class="card">
-<h2>🧠 Agentic AI Engine</h2>
-<p>Advanced AI framework for prediction and decision support.</p>
-<ul>
-<li>Transformer Models</li>
-<li>Reinforcement Learning</li>
-<li>Geomechanical Analytics</li>
-<li>Real-Time Intelligence</li>
-</ul>
+<div id="oil" class="image-box">
+<h2>Oil Production</h2>
+<img src="oil.png" alt="Oil Production">
 </div>
 
+<div id="gas" class="image-box">
+<h2>Gas Production</h2>
+<img src="gas.png" alt="Gas Production">
+</div>
+
+<div id="water" class="image-box">
+<h2>Water Production</h2>
+<img src="water.png" alt="Water Production">
+</div>
+
+<div id="rig" class="image-box">
+<h2>Rig Count</h2>
+<img src="rig.png" alt="Rig Count">
+</div>
+
+<div id="seismic" class="image-box">
+<h2>Seismic Map</h2>
+<img src="seismic-map.png" alt="Seismic Map">
+</div>
+
+<div id="bvalue" class="image-box">
+<h2>B-Value Risk Map</h2>
+<img src="bvalue-risk.png" alt="B-Value Risk Map">
+</div>
+
+<div id="forecast" class="image-box">
+<h2>Seismicity Forecast</h2>
+<img src="seismicity-forecast.png" alt="Seismicity Forecast">
+</div>
+
+<div id="injection" class="image-box">
+<h2>ProActive Injection Control</h2>
+<img src="injection-control.png" alt="ProActive Injection Control">
 </div>
 
 </div>
 
 <div class="footer">
 <a href="about.html">About</a>
-<a href="platform.html">Platform</a>
 <a href="contact.html">Contact</a>
-<a href="legal.html">Legal</a>
 </div>
 
 <div class="copy">
 © 2026 PermianAgentic. All Rights Reserved.
 </div>
+
+<script>
+function showImage(id){
+const boxes=document.querySelectorAll('.image-box');
+boxes.forEach(box=>box.style.display='none');
+
+const selected=document.getElementById(id);
+selected.style.display='block';
+selected.scrollIntoView({behavior:'smooth'});
+}
+</script>
 
 </body>
 </html>
