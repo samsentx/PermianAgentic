@@ -1,8 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 
 body{
@@ -14,13 +16,13 @@ color:#0f172a;
 }
 
 .hero{
-padding:50px 20px 35px;
+padding:60px 20px 30px;
 }
 
 .hero-logo{
-width:210px;
-max-width:60%;
-margin:0 auto 20px;
+width:420px;
+max-width:90%;
+margin:0 auto;
 display:block;
 filter:drop-shadow(0 15px 30px rgba(0,0,0,.25));
 animation:float 5s ease-in-out infinite;
@@ -32,64 +34,8 @@ animation:float 5s ease-in-out infinite;
 100%{transform:translateY(0);}
 }
 
-.title{
-display:block;
-width:100%;
-text-align:center;
-margin:0 auto;
-font-size:64px;
-font-weight:900;
-background:linear-gradient(90deg,#0f766e,#2563eb,#7c3aed,#0f766e);
-background-size:300% 300%;
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-animation:move 5s ease infinite;
-}
-
-.subtitle{
-font-size:32px;
-font-weight:900;
-margin-top:16px;
-color:#1e293b;
-}
-
-.tagline{
-font-size:25px;
-font-weight:800;
-margin-top:18px;
-color:#0f766e;
-}
-
-.description{
-max-width:900px;
-margin:28px auto 0;
-font-size:22px;
-font-weight:700;
-line-height:1.55;
-color:#475569;
-}
-
-.cta{
-margin-top:34px;
-padding:23px 56px;
-font-size:27px;
-font-weight:900;
-border:none;
-border-radius:16px;
-cursor:pointer;
-color:white;
-background:linear-gradient(90deg,#0f766e,#2563eb,#7c3aed);
-box-shadow:0 0 22px rgba(37,99,235,.35);
-}
-
-@keyframes move{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
-
 .section{
-margin:35px auto;
+margin:20px auto;
 max-width:1120px;
 padding:0 24px;
 }
@@ -189,34 +135,13 @@ color:#0f172a;
 @media(max-width:760px){
 
 .hero-logo{
-width:150px;
-max-width:55%;
-}
-
-.title{
-font-size:43px;
-}
-
-.subtitle{
-font-size:24px;
-}
-
-.tagline{
-font-size:21px;
-}
-
-.description{
-font-size:18px;
+width:280px;
+max-width:90%;
 }
 
 .card{
 width:86%;
 padding:26px;
-}
-
-.cta{
-font-size:22px;
-padding:20px 38px;
 }
 
 }
@@ -227,27 +152,7 @@ padding:20px 38px;
 <body>
 
 <div class="hero">
-
 <img src="image.png" alt="PermianAgentic Logo" class="hero-logo">
-
-<div class="title">PermianAgentic</div>
-
-<div class="subtitle">
-Agentic AI Platform for SWD Injection Control and Induced Seismic Risk Forecasting
-</div>
-
-<div class="tagline">
-Predict • Optimize • Mitigate
-</div>
-
-<div class="description">
-Agentic AI platform designed to SWD injection control and induced seismicity migitataion across the Permian Basin.
-</div>
-
-<button class="cta" onclick="location.href='mailto:info@permianagentic.com'">
-REQUEST DEMO
-</button>
-
 </div>
 
 <div class="section">
