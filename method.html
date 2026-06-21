@@ -1,37 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Methodology | PermianAgentic</title>
+
+<style>
+
+body{
+margin:0;
+padding:40px;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#eef2ff,#f8fafc,#ede9fe);
+color:#111827;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+background:white;
+padding:50px;
+border-radius:20px;
+box-shadow:0 18px 45px rgba(0,0,0,.15);
+line-height:1.9;
+font-size:18px;
+}
+
+h1{
+text-align:center;
+color:#2563eb;
+font-size:46px;
+font-weight:900;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#64748b;
+font-size:18px;
+margin-bottom:30px;
+}
+
+h2{
+color:#2563eb;
+font-size:30px;
+font-weight:900;
+margin-top:45px;
+margin-bottom:20px;
+border-left:6px solid #2563eb;
+padding-left:15px;
+}
+
+p{
+text-align:justify;
+}
+
+ul{
+line-height:2;
+}
+
+hr{
+margin:40px 0;
+border:1px solid #e5e7eb;
+}
+
+.highlight{
+font-weight:900;
+color:#dc2626;
+}
+
+.footer{
+margin-top:40px;
+text-align:center;
+font-weight:900;
+color:#64748b;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Methodology</h1>
+
+<div class="subtitle">
+Transformer Forecasting • Agentic AI • Reinforcement Learning • Seismic Risk Intelligence
+</div>
+
+<hr>
+
 <h2>Transformer-Based Forecasting Engine</h2>
 
-The forecasting engine of PermianAgentic is built upon a Transformer Time Series architecture specifically designed to model complex temporal dynamics in subsurface systems. The model utilizes the scaled dot-product attention mechanism, enabling it to learn relationships across all observations within a sequence rather than relying solely on adjacent time steps. This approach allows the system to capture long-range dependencies and evolving temporal patterns while avoiding the information loss commonly encountered in traditional recurrent neural networks (Vaswani et al., 2017; Li et al., 2023).
+<p>
+The forecasting engine of <span class="highlight">PermianAgentic</span> is built upon a Transformer Time Series architecture specifically designed to model complex temporal dynamics within subsurface systems. The model utilizes the scaled dot-product attention mechanism, enabling it to learn relationships across all observations within a sequence rather than relying solely on adjacent time steps. This capability allows the system to capture long-range dependencies and evolving temporal patterns while mitigating the information loss commonly observed in traditional recurrent neural networks.
+</p>
 
-The architecture follows an encoder–decoder framework. The encoder transforms historical operational and seismic observations into contextual representations, while the decoder leverages these learned representations to generate future forecasts. Multi-head attention layers allow the model to simultaneously learn multiple representations of the data, improving its ability to identify hidden patterns, nonlinear relationships, and emerging trends within complex time-series datasets.
+<p>
+The architecture follows an encoder–decoder framework. The encoder transforms historical operational and seismic observations into contextual representations, while the decoder leverages these learned representations to generate future forecasts. Multi-head attention layers allow the model to learn multiple representations of the data simultaneously, improving its ability to identify nonlinear relationships, hidden dependencies, and emerging trends within complex operational datasets.
+</p>
 
+<p>
 To preserve temporal order, positional encoding is incorporated into the input embeddings. This enables the model to recognize sequential structure while maintaining the flexibility of attention-based learning. The forecasting framework is implemented in Python using TensorFlow and executed within a Google Colab environment.
+</p>
+
+<hr>
 
 <h2>Seismic Hazard Intelligence</h2>
 
-PermianAgentic combines advanced forecasting with spatial seismic risk assessment to provide actionable intelligence for injection management. Transformer-based earthquake forecasting models continuously analyze historical seismicity and operational data to identify potential increases in seismic hazard. The system is capable of detecting elevated risk conditions up to ten days before the occurrence of potential Mw > 4 induced seismic events.
+<p>
+PermianAgentic combines advanced forecasting with spatial seismic risk assessment to provide actionable intelligence for SWD injection management. Transformer-based earthquake forecasting models continuously analyze historical seismicity and operational datasets to identify potential increases in seismic hazard.
+</p>
 
-In parallel, spatial b-value analysis based on the Gutenberg–Richter relationship is performed to characterize stress conditions throughout the basin. Areas exhibiting low b-values are interpreted as regions of elevated seismic susceptibility, whereas high b-value regions generally indicate lower seismic risk. These dynamic risk maps provide a continuously updated representation of basin-wide seismic conditions.
+<p>
+The forecasting engine is capable of identifying elevated seismic risk conditions up to ten days before the occurrence of potential Mw > 4 induced seismic events. This early-warning capability provides operators with valuable time to evaluate and implement mitigation strategies before critical seismic thresholds are reached.
+</p>
+
+<p>
+In parallel, spatial b-value analysis based on the Gutenberg–Richter relationship is performed to characterize stress conditions throughout the basin. Areas exhibiting low b-values are interpreted as regions of elevated seismic susceptibility, while high b-value regions generally indicate lower seismic risk. These dynamic risk maps provide continuously updated basin-scale intelligence.
+</p>
+
+<hr>
 
 <h2>Agentic AI Decision Framework</h2>
 
-Beyond forecasting and risk assessment, PermianAgentic incorporates an Agentic AI framework that enables proactive and autonomous SWD injection management. The platform integrates Transformer-based forecasting, spatial b-value intelligence, and Reinforcement Learning (RL) into a closed-loop decision-making architecture.
+<p>
+Beyond forecasting and risk assessment, PermianAgentic incorporates an Agentic AI framework that enables proactive and autonomous SWD injection management. The platform integrates Transformer-based forecasting, spatial b-value intelligence, GIS-based basin analytics, and Reinforcement Learning (RL) into a closed-loop decision-making architecture.
+</p>
 
-The RL agent continuously evaluates evolving seismic and operational conditions and determines optimal injection strategies across the basin. When elevated seismic risk is identified, injection volumes can be reduced in high-risk regions characterized by low b-values. Conversely, injection capacity can be strategically increased in lower-risk regions characterized by higher b-values. This adaptive redistribution of injection activity helps maintain operational efficiency while reducing the likelihood of induced seismic events.
+<p>
+The RL agent continuously evaluates evolving seismic and operational conditions and determines optimal injection strategies throughout the basin. When elevated seismic risk is identified, injection rates can be reduced in high-risk regions characterized by low b-values. Conversely, injection capacity can be strategically increased in lower-risk regions characterized by higher b-values.
+</p>
+
+<p>
+This adaptive redistribution of injection activity helps maintain operational efficiency while reducing the likelihood of induced seismic events, allowing operators to balance production objectives with seismic risk mitigation.
+</p>
+
+<hr>
 
 <h2>Autonomous SWD Control</h2>
 
-The decision engine operates through a reward–penalty optimization framework that balances two critical objectives: maximizing operational performance and minimizing seismic risk. As new production, injection, and seismic observations become available, the system automatically updates forecasts, reassesses spatial risk, and refines operational recommendations.
+<p>
+The decision engine operates through a reward–penalty optimization framework that balances two critical objectives: maximizing operational performance and minimizing seismic risk. As new production, injection, and seismic observations become available, the system automatically updates forecasts, reassesses spatial risk conditions, and refines operational recommendations.
+</p>
 
+<p>
 This closed-loop architecture transforms traditional reactive injection management into a proactive, data-driven control strategy. By continuously learning from new information, PermianAgentic provides dynamic basin-scale intelligence that supports safer, more efficient, and more sustainable SWD operations.
+</p>
+
+<hr>
 
 <h2>Technology Stack</h2>
 
-• Transformer Time Series Forecasting
-• Multi-Head Attention Networks
-• Reinforcement Learning (RL) Optimization
-• Agentic AI Decision Systems
-• Spatial b-Value Analytics
-• GIS-Based Basin Intelligence
-• TensorFlow & Python Development Framework
-• Real-Time Seismic Risk Monitoring
-• Autonomous SWD Injection Control
+<ul>
+<li>Transformer Time Series Forecasting</li>
+<li>Multi-Head Attention Networks</li>
+<li>Reinforcement Learning (RL) Optimization</li>
+<li>Agentic AI Decision Systems</li>
+<li>Spatial b-Value Analytics</li>
+<li>GIS-Based Basin Intelligence</li>
+<li>TensorFlow & Python Development Framework</li>
+<li>Real-Time Seismic Risk Monitoring</li>
+<li>Autonomous SWD Injection Control</li>
+<li>Google Colab Computing Environment</li>
+<li>GeoPandas & Spatial Analytics</li>
+<li>Advanced Data Visualization Tools</li>
+</ul>
+
+<div class="footer">
+© 2026 PermianAgentic — All Rights Reserved
+</div>
+
+</div>
+
+</body>
+</html>
