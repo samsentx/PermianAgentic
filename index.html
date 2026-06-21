@@ -48,6 +48,18 @@ gap:18px;
 margin:0 auto 32px;
 }
 
+.center-cards{
+display:flex;
+justify-content:center;
+gap:18px;
+margin:0 auto 32px;
+flex-wrap:wrap;
+}
+
+.center-cards .card{
+width:240px;
+}
+
 .card{
 background:white;
 border:none;
@@ -79,14 +91,12 @@ line-height:1.15;
 .gas{color:#f59e0b;}
 .water{color:#2563eb;}
 .rig{color:#dc2626;}
-
+.swdmap{color:#0f766e;}
 .deep{color:#2563eb;}
 .shallow{color:#16a34a;}
-
 .seismic{color:#dc2626;}
 .time{color:#f97316;}
 .depth{color:#2563eb;}
-
 .gis{color:#0f766e;}
 .forecast{color:#3b82f6;}
 .risk{color:#e11d48;}
@@ -162,6 +172,14 @@ grid-template-columns:repeat(2,1fr);
 gap:12px;
 }
 
+.center-cards{
+gap:12px;
+}
+
+.center-cards .card{
+width:43%;
+}
+
 .card{
 padding:22px 8px 18px;
 }
@@ -219,7 +237,12 @@ font-size:18px;
 
 <h1 class="section-title">SWD Injection Data</h1>
 
-<div class="card-grid">
+<div class="center-cards">
+<button class="card" onclick="showImage('swd-map')">
+<i class="fa-solid fa-map-location-dot icon swdmap"></i>
+<div class="card-title">SWD Injection Map</div>
+</button>
+
 <button class="card" onclick="showImage('deep')">
 <i class="fa-solid fa-arrow-down-long icon deep"></i>
 <div class="card-title">Deep Injection</div>
@@ -233,7 +256,7 @@ font-size:18px;
 
 <h1 class="section-title">Induced Seismicity Data</h1>
 
-<div class="card-grid">
+<div class="center-cards">
 <button class="card" onclick="showImage('seismic')">
 <i class="fa-solid fa-earth-americas icon seismic"></i>
 <div class="card-title">Seismicity Map</div>
@@ -252,9 +275,9 @@ font-size:18px;
 
 <h1 class="section-title">Agentic AI SWD Control Data</h1>
 
-<div class="card-grid">
+<div class="center-cards">
 <button class="card" onclick="showImage('basin-gis')">
-<i class="fa-solid fa-map-location-dot icon gis"></i>
+<i class="fa-solid fa-map icon gis"></i>
 <div class="card-title">Basin GIS Data</div>
 </button>
 
@@ -271,14 +294,14 @@ font-size:18px;
 
 <h1 class="section-title">Agentic AI SWD Autonomous Control Video</h1>
 
-<div class="card-grid">
+<div class="center-cards">
 <button class="card" onclick="showImage('autonomous-video')">
 <i class="fa-solid fa-circle-play icon video"></i>
 <div class="card-title">Autonomous Control Video</div>
 </button>
 </div>
 
-<h1 class="section-title">Industry Report Request</h1>
+<h1 class="section-title">Our Reports For Industry</h1>
 
 <div class="card-grid">
 <button class="card" onclick="showImage('well-decline-report')">
@@ -320,6 +343,11 @@ font-size:18px;
 <div id="rig" class="image-box">
 <h2>Rig Count</h2>
 <img src="rig.png" alt="Rig Count">
+</div>
+
+<div id="swd-map" class="image-box">
+<h2>SWD Injection Map</h2>
+<img src="swd-injection-map.png" alt="SWD Injection Map">
 </div>
 
 <div id="deep" class="image-box">
@@ -390,10 +418,8 @@ font-size:18px;
 </div>
 
 <div class="footer">
-<a href="model.html"><i class="fa-solid fa-brain"></i>Model</a>
 <a href="method.html"><i class="fa-solid fa-book"></i>Method</a>
 <a href="about.html"><i class="fa-solid fa-users"></i>About Us</a>
-<a href="directors.html"><i class="fa-solid fa-user-tie"></i>Directors</a>
 <a href="contact.html"><i class="fa-solid fa-envelope"></i>Contact</a>
 </div>
 
