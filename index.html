@@ -126,6 +126,15 @@ box-shadow:0 20px 60px rgba(0,0,0,.55);
 background:white;
 }
 
+.modal-video{
+display:none;
+max-width:95%;
+max-height:90vh;
+border-radius:16px;
+box-shadow:0 20px 60px rgba(0,0,0,.55);
+background:#000;
+}
+
 .close-modal{
 position:absolute;
 top:18px;
@@ -227,22 +236,22 @@ font-size:18px;
 <h1 class="section-title">Production Data</h1>
 
 <div class="card-grid">
-<button class="card" onclick="showImage('oil')">
+<button class="card" onclick="showMedia('oil')">
 <i class="fa-solid fa-oil-well icon oil"></i>
 <div class="card-title">Oil Production</div>
 </button>
 
-<button class="card" onclick="showImage('gas')">
+<button class="card" onclick="showMedia('gas')">
 <i class="fa-solid fa-fire-flame-curved icon gas"></i>
 <div class="card-title">Gas Production</div>
 </button>
 
-<button class="card" onclick="showImage('water')">
+<button class="card" onclick="showMedia('water')">
 <i class="fa-solid fa-droplet icon water"></i>
 <div class="card-title">Water Production</div>
 </button>
 
-<button class="card" onclick="showImage('rig')">
+<button class="card" onclick="showMedia('rig')">
 <i class="fa-solid fa-industry icon rig"></i>
 <div class="card-title">Rig Count</div>
 </button>
@@ -251,17 +260,17 @@ font-size:18px;
 <h1 class="section-title">SWD Injection Data</h1>
 
 <div class="center-cards">
-<button class="card" onclick="showImage('swd-map')">
+<button class="card" onclick="showMedia('swd-map')">
 <i class="fa-solid fa-map-location-dot icon swdmap"></i>
 <div class="card-title">SWD Injection Map</div>
 </button>
 
-<button class="card" onclick="showImage('deep')">
+<button class="card" onclick="showMedia('deep')">
 <i class="fa-solid fa-arrow-down-long icon deep"></i>
 <div class="card-title">Deep Injection</div>
 </button>
 
-<button class="card" onclick="showImage('shallow')">
+<button class="card" onclick="showMedia('shallow')">
 <i class="fa-solid fa-arrow-up-long icon shallow"></i>
 <div class="card-title">Shallow Injection</div>
 </button>
@@ -270,17 +279,17 @@ font-size:18px;
 <h1 class="section-title">Induced Seismicity Data</h1>
 
 <div class="center-cards">
-<button class="card" onclick="showImage('seismic')">
+<button class="card" onclick="showMedia('seismic')">
 <i class="fa-solid fa-earth-americas icon seismic"></i>
 <div class="card-title">Seismicity Map</div>
 </button>
 
-<button class="card" onclick="showImage('seismicity-time')">
+<button class="card" onclick="showMedia('seismicity-time')">
 <i class="fa-solid fa-chart-line icon time"></i>
 <div class="card-title">Seismicity-Time</div>
 </button>
 
-<button class="card" onclick="showImage('seismicity-depth')">
+<button class="card" onclick="showMedia('seismicity-depth')">
 <i class="fa-solid fa-layer-group icon depth"></i>
 <div class="card-title">Seismicity-Depth</div>
 </button>
@@ -289,17 +298,17 @@ font-size:18px;
 <h1 class="section-title">Agentic AI SWD Control Data</h1>
 
 <div class="center-cards">
-<button class="card" onclick="showImage('basin-gis')">
+<button class="card" onclick="showMedia('basin-gis')">
 <i class="fa-solid fa-map icon gis"></i>
 <div class="card-title">Basin GIS Data</div>
 </button>
 
-<button class="card" onclick="showImage('forecast')">
+<button class="card" onclick="showMedia('forecast')">
 <i class="fa-solid fa-wave-square icon forecast"></i>
 <div class="card-title">Seismicity Forecast</div>
 </button>
 
-<button class="card" onclick="showImage('bvalue')">
+<button class="card" onclick="showMedia('bvalue')">
 <i class="fa-solid fa-bullseye icon risk"></i>
 <div class="card-title">B-Value Risk Map</div>
 </button>
@@ -308,7 +317,7 @@ font-size:18px;
 <h1 class="section-title">Agentic AI SWD Autonomous Control Video</h1>
 
 <div class="center-cards">
-<button class="card" onclick="showImage('autonomous-video')">
+<button class="card" onclick="showMedia('autonomous-video')">
 <i class="fa-solid fa-circle-play icon video"></i>
 <div class="card-title">Autonomous Control Video</div>
 </button>
@@ -317,22 +326,22 @@ font-size:18px;
 <h1 class="section-title">Our Reports For Industry</h1>
 
 <div class="card-grid">
-<button class="card" onclick="showImage('well-decline-report')">
+<button class="card" onclick="showMedia('well-decline-report')">
 <i class="fa-solid fa-chart-area icon report"></i>
 <div class="card-title">Well Decline Report</div>
 </button>
 
-<button class="card" onclick="showImage('production-forecast-report')">
+<button class="card" onclick="showMedia('production-forecast-report')">
 <i class="fa-solid fa-chart-line icon report"></i>
 <div class="card-title">Production Forecast Report</div>
 </button>
 
-<button class="card" onclick="showImage('lease-report')">
+<button class="card" onclick="showMedia('lease-report')">
 <i class="fa-solid fa-file-waveform icon report"></i>
 <div class="card-title">Lease Area Seismic Risk Report</div>
 </button>
 
-<button class="card" onclick="showImage('optimization-report')">
+<button class="card" onclick="showMedia('optimization-report')">
 <i class="fa-solid fa-file-contract icon report"></i>
 <div class="card-title">SWD Injection Optimization Report</div>
 </button>
@@ -350,13 +359,18 @@ font-size:18px;
 © 2026 All Rights Reserved.
 </div>
 
-<div id="imageModal" class="modal">
+<div id="mediaModal" class="modal">
 <span class="close-modal" onclick="closeModal()">&times;</span>
+
 <img id="modalImage" class="modal-content" alt="Popup Image">
+
+<video id="modalVideo" class="modal-video" controls>
+<source id="videoSource" src="" type="video/mp4">
+</video>
 </div>
 
 <script>
-const imgMap={
+const mediaMap={
 'oil':'oil.png',
 'gas':'gas.png',
 'water':'water.png',
@@ -370,25 +384,57 @@ const imgMap={
 'basin-gis':'basin-gis-data.png',
 'forecast':'seismicity-forecast.png',
 'bvalue':'bvalue-risk.png',
-'autonomous-video':'agentic-ai-swd-autonomous-control-video.png',
+'autonomous-video':'agentic-ai-swd-autonomous-control-video.mp4',
 'well-decline-report':'well-decline-report.png',
 'production-forecast-report':'production-forecast-report.png',
 'lease-report':'lease-area-seismic-risk-report.png',
 'optimization-report':'swd-injection-optimization-report.png'
 };
 
-function showImage(id){
-document.getElementById('modalImage').src=imgMap[id];
-document.getElementById('imageModal').style.display='flex';
+function showMedia(id){
+const file=mediaMap[id];
+const modal=document.getElementById('mediaModal');
+const image=document.getElementById('modalImage');
+const video=document.getElementById('modalVideo');
+const source=document.getElementById('videoSource');
+
+if(file.endsWith('.mp4')){
+image.style.display='none';
+image.src='';
+
+source.src=file;
+video.load();
+video.style.display='block';
+}
+else{
+video.pause();
+video.style.display='none';
+source.src='';
+
+image.src=file;
+image.style.display='block';
+}
+
+modal.style.display='flex';
 }
 
 function closeModal(){
-document.getElementById('imageModal').style.display='none';
-document.getElementById('modalImage').src='';
+const modal=document.getElementById('mediaModal');
+const image=document.getElementById('modalImage');
+const video=document.getElementById('modalVideo');
+const source=document.getElementById('videoSource');
+
+modal.style.display='none';
+
+video.pause();
+source.src='';
+video.load();
+
+image.src='';
 }
 
 window.onclick=function(event){
-const modal=document.getElementById('imageModal');
+const modal=document.getElementById('mediaModal');
 if(event.target===modal){
 closeModal();
 }
