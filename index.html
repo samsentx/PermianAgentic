@@ -103,25 +103,38 @@ line-height:1.15;
 .video{color:#dc2626;}
 .report{color:#7c3aed;}
 
-.image-box{
+.modal{
 display:none;
-margin:20px auto 40px;
-max-width:1050px;
-background:white;
-padding:22px;
-border-radius:24px;
-box-shadow:0 16px 38px rgba(0,0,0,.14);
-}
-
-.image-box img{
+position:fixed;
+z-index:9999;
+left:0;
+top:0;
 width:100%;
-max-width:1000px;
-border-radius:18px;
+height:100%;
+background:rgba(0,0,0,.88);
+justify-content:center;
+align-items:center;
+padding:20px;
+box-sizing:border-box;
 }
 
-.image-box h2{
-color:#0f766e;
-font-size:30px;
+.modal-content{
+max-width:95%;
+max-height:90vh;
+border-radius:16px;
+box-shadow:0 20px 60px rgba(0,0,0,.55);
+background:white;
+}
+
+.close-modal{
+position:absolute;
+top:18px;
+right:32px;
+font-size:52px;
+font-weight:bold;
+color:white;
+cursor:pointer;
+z-index:10000;
 }
 
 .footer{
@@ -206,7 +219,7 @@ font-size:18px;
 <body>
 
 <div class="hero">
-<img src="image.png?v=20260620" alt="PermianAgentic Logo" class="hero-logo">
+<img src="image.png" alt="PermianAgentic Logo" class="hero-logo">
 </div>
 
 <div class="section">
@@ -325,96 +338,6 @@ font-size:18px;
 </button>
 </div>
 
-<div id="oil" class="image-box">
-<h2>Oil Production</h2>
-<img src="oil.png" alt="Oil Production">
-</div>
-
-<div id="gas" class="image-box">
-<h2>Gas Production</h2>
-<img src="gas.png" alt="Gas Production">
-</div>
-
-<div id="water" class="image-box">
-<h2>Water Production</h2>
-<img src="water.png" alt="Water Production">
-</div>
-
-<div id="rig" class="image-box">
-<h2>Rig Count</h2>
-<img src="rig.png" alt="Rig Count">
-</div>
-
-<div id="swd-map" class="image-box">
-<h2>SWD Injection Map</h2>
-<img src="swd-injection-map.png" alt="SWD Injection Map">
-</div>
-
-<div id="deep" class="image-box">
-<h2>Deep Injection</h2>
-<img src="deep-injection.png" alt="Deep Injection">
-</div>
-
-<div id="shallow" class="image-box">
-<h2>Shallow Injection</h2>
-<img src="shallow-injection.png" alt="Shallow Injection">
-</div>
-
-<div id="seismic" class="image-box">
-<h2>Seismicity Map</h2>
-<img src="seismic-map.png" alt="Seismicity Map">
-</div>
-
-<div id="seismicity-time" class="image-box">
-<h2>Seismicity-Time</h2>
-<img src="seismicity-time.png" alt="Seismicity Time">
-</div>
-
-<div id="seismicity-depth" class="image-box">
-<h2>Seismicity-Depth</h2>
-<img src="seismicity-depth.png" alt="Seismicity Depth">
-</div>
-
-<div id="basin-gis" class="image-box">
-<h2>Basin GIS Data</h2>
-<img src="basin-gis-data.png" alt="Basin GIS Data">
-</div>
-
-<div id="forecast" class="image-box">
-<h2>Seismicity Forecast</h2>
-<img src="seismicity-forecast.png" alt="Seismicity Forecast">
-</div>
-
-<div id="bvalue" class="image-box">
-<h2>B-Value Risk Map</h2>
-<img src="bvalue-risk.png" alt="B-Value Risk Map">
-</div>
-
-<div id="autonomous-video" class="image-box">
-<h2>Agentic AI SWD Autonomous Control Video</h2>
-<img src="agentic-ai-swd-autonomous-control-video.png" alt="Agentic AI SWD Autonomous Control Video">
-</div>
-
-<div id="well-decline-report" class="image-box">
-<h2>Well Decline Report</h2>
-<img src="well-decline-report.png" alt="Well Decline Report">
-</div>
-
-<div id="production-forecast-report" class="image-box">
-<h2>Production Forecast Report</h2>
-<img src="production-forecast-report.png" alt="Production Forecast Report">
-</div>
-
-<div id="lease-report" class="image-box">
-<h2>Lease Area Seismic Risk Report</h2>
-<img src="lease-area-seismic-risk-report.png" alt="Lease Area Seismic Risk Report">
-</div>
-
-<div id="optimization-report" class="image-box">
-<h2>SWD Injection Optimization Report</h2>
-<img src="swd-injection-optimization-report.png" alt="SWD Injection Optimization Report">
-</div>
-
 </div>
 
 <div class="footer">
@@ -427,15 +350,55 @@ font-size:18px;
 © 2026 All Rights Reserved.
 </div>
 
-<script>
-function showImage(id){
-const boxes=document.querySelectorAll('.image-box');
-boxes.forEach(box=>box.style.display='none');
+<div id="imageModal" class="modal">
+<span class="close-modal" onclick="closeModal()">&times;</span>
+<img id="modalImage" class="modal-content" alt="Popup Image">
+</div>
 
-const selected=document.getElementById(id);
-selected.style.display='block';
-selected.scrollIntoView({behavior:'smooth'});
+<script>
+const imgMap={
+'oil':'oil.png',
+'gas':'gas.png',
+'water':'water.png',
+'rig':'rig.png',
+'swd-map':'swd-injection-map.png',
+'deep':'deep-injection.png',
+'shallow':'shallow-injection.png',
+'seismic':'seismic-map.png',
+'seismicity-time':'seismicity-time.png',
+'seismicity-depth':'seismicity-depth.png',
+'basin-gis':'basin-gis-data.png',
+'forecast':'seismicity-forecast.png',
+'bvalue':'bvalue-risk.png',
+'autonomous-video':'agentic-ai-swd-autonomous-control-video.png',
+'well-decline-report':'well-decline-report.png',
+'production-forecast-report':'production-forecast-report.png',
+'lease-report':'lease-area-seismic-risk-report.png',
+'optimization-report':'swd-injection-optimization-report.png'
+};
+
+function showImage(id){
+document.getElementById('modalImage').src=imgMap[id];
+document.getElementById('imageModal').style.display='flex';
 }
+
+function closeModal(){
+document.getElementById('imageModal').style.display='none';
+document.getElementById('modalImage').src='';
+}
+
+window.onclick=function(event){
+const modal=document.getElementById('imageModal');
+if(event.target===modal){
+closeModal();
+}
+}
+
+document.addEventListener('keydown',function(event){
+if(event.key==='Escape'){
+closeModal();
+}
+});
 </script>
 
 </body>
