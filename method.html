@@ -1,8 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Methodology | PermianAgentic</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology | BasinAgentic</title>
 
 <style>
 
@@ -73,10 +75,10 @@ margin-top:40px;
 text-align:center;
 font-weight:900;
 color:#64748b;
+font-size:14px;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -86,7 +88,7 @@ color:#64748b;
 <h1>Methodology</h1>
 
 <div class="subtitle">
-Transformer Forecasting • Agentic AI • Reinforcement Learning • Seismic Risk Intelligence
+Transformer Forecasting • Agentic AI • Reinforcement Learning • Basin Intelligence
 </div>
 
 <hr>
@@ -94,15 +96,27 @@ Transformer Forecasting • Agentic AI • Reinforcement Learning • Seismic Ri
 <h2>Transformer-Based Forecasting Engine</h2>
 
 <p>
-The forecasting engine of <span class="highlight">PermianAgentic</span> is built upon a Transformer Time Series architecture specifically designed to model complex temporal dynamics within subsurface systems. The model utilizes the scaled dot-product attention mechanism, enabling it to learn relationships across all observations within a sequence rather than relying solely on adjacent time steps. This capability allows the system to capture long-range dependencies and evolving temporal patterns while mitigating the information loss commonly observed in traditional recurrent neural networks.
+The forecasting engine of <span class="highlight">BasinAgentic</span> is built upon advanced Transformer Time Series architectures specifically designed to model complex temporal dynamics within subsurface energy systems. The model utilizes scaled dot-product attention mechanisms that enable learning relationships across entire sequences rather than relying solely on adjacent observations. This capability allows the system to capture long-range dependencies, nonlinear interactions, and evolving operational patterns across basin-scale datasets.
 </p>
 
 <p>
-The architecture follows an encoder–decoder framework. The encoder transforms historical operational and seismic observations into contextual representations, while the decoder leverages these learned representations to generate future forecasts. Multi-head attention layers allow the model to learn multiple representations of the data simultaneously, improving its ability to identify nonlinear relationships, hidden dependencies, and emerging trends within complex operational datasets.
+The architecture follows an encoder–decoder framework. Historical operational, production, injection, environmental, and seismic observations are transformed into contextual representations by the encoder, while the decoder generates future forecasts using the learned temporal relationships. Multi-head attention mechanisms enable simultaneous learning of multiple data representations, improving forecasting accuracy and interpretability.
 </p>
 
 <p>
-To preserve temporal order, positional encoding is incorporated into the input embeddings. This enables the model to recognize sequential structure while maintaining the flexibility of attention-based learning. The forecasting framework is implemented in Python using TensorFlow and executed within a Google Colab environment.
+Positional encoding preserves temporal order within sequential datasets while maintaining the flexibility of attention-based learning. The forecasting framework is implemented using Python, TensorFlow, and modern cloud-based computational environments.
+</p>
+
+<hr>
+
+<h2>Basin Intelligence Framework</h2>
+
+<p>
+BasinAgentic integrates forecasting, spatial analytics, and operational intelligence to provide a comprehensive understanding of basin-scale dynamics. The platform continuously analyzes historical and real-time datasets including production, injection, reservoir performance, fluid movement, environmental indicators, and seismic activity.
+</p>
+
+<p>
+Advanced spatial analytics identify evolving operational patterns and potential risk zones across the basin. Geospatial intelligence modules generate dynamic maps and continuously updated basin-wide situational awareness, enabling data-driven operational decision making.
 </p>
 
 <hr>
@@ -110,15 +124,11 @@ To preserve temporal order, positional encoding is incorporated into the input e
 <h2>Seismic Hazard Intelligence</h2>
 
 <p>
-PermianAgentic combines advanced forecasting with spatial seismic risk assessment to provide actionable intelligence for SWD injection management. Transformer-based earthquake forecasting models continuously analyze historical seismicity and operational datasets to identify potential increases in seismic hazard.
+For regions where induced seismicity is relevant, BasinAgentic incorporates advanced seismic intelligence capabilities. Transformer-based forecasting models evaluate seismic activity and operational conditions to identify potential increases in seismic hazard.
 </p>
 
 <p>
-The forecasting engine is capable of identifying elevated seismic risk conditions up to ten days before the occurrence of potential Mw > 4 induced seismic events. This early-warning capability provides operators with valuable time to evaluate and implement mitigation strategies before critical seismic thresholds are reached.
-</p>
-
-<p>
-In parallel, spatial b-value analysis based on the Gutenberg–Richter relationship is performed to characterize stress conditions throughout the basin. Areas exhibiting low b-values are interpreted as regions of elevated seismic susceptibility, while high b-value regions generally indicate lower seismic risk. These dynamic risk maps provide continuously updated basin-scale intelligence.
+Spatial b-value analysis based on the Gutenberg–Richter relationship is used to characterize stress conditions across the basin. Lower b-values may indicate elevated stress accumulation and higher seismic susceptibility, while higher b-values generally represent lower seismic risk conditions. These continuously updated risk assessments support proactive operational planning and risk mitigation.
 </p>
 
 <hr>
@@ -126,27 +136,23 @@ In parallel, spatial b-value analysis based on the Gutenberg–Richter relations
 <h2>Agentic AI Decision Framework</h2>
 
 <p>
-Beyond forecasting and risk assessment, PermianAgentic incorporates an Agentic AI framework that enables proactive and autonomous SWD injection management. The platform integrates Transformer-based forecasting, spatial b-value intelligence, GIS-based basin analytics, and Reinforcement Learning (RL) into a closed-loop decision-making architecture.
+Beyond forecasting and monitoring, BasinAgentic incorporates an Agentic AI framework capable of autonomous reasoning and decision support. The platform integrates forecasting models, spatial intelligence, geoscience analytics, operational constraints, and Reinforcement Learning into a closed-loop decision architecture.
 </p>
 
 <p>
-The RL agent continuously evaluates evolving seismic and operational conditions and determines optimal injection strategies throughout the basin. When elevated seismic risk is identified, injection rates can be reduced in high-risk regions characterized by low b-values. Conversely, injection capacity can be strategically increased in lower-risk regions characterized by higher b-values.
-</p>
-
-<p>
-This adaptive redistribution of injection activity helps maintain operational efficiency while reducing the likelihood of induced seismic events, allowing operators to balance production objectives with seismic risk mitigation.
+The Agentic AI engine continuously evaluates changing basin conditions and generates adaptive operational recommendations. Depending on user-defined objectives, the system can optimize production strategies, injection allocation, water management, reservoir performance, seismic risk reduction, environmental compliance, or economic outcomes.
 </p>
 
 <hr>
 
-<h2>Autonomous SWD Control</h2>
+<h2>Autonomous Operational Optimization</h2>
 
 <p>
-The decision engine operates through a reward–penalty optimization framework that balances two critical objectives: maximizing operational performance and minimizing seismic risk. As new production, injection, and seismic observations become available, the system automatically updates forecasts, reassesses spatial risk conditions, and refines operational recommendations.
+The decision engine operates through reward–penalty optimization mechanisms designed to balance operational efficiency, economic performance, safety, and sustainability objectives. As new observations become available, BasinAgentic automatically updates forecasts, reassesses basin conditions, and refines recommendations.
 </p>
 
 <p>
-This closed-loop architecture transforms traditional reactive injection management into a proactive, data-driven control strategy. By continuously learning from new information, PermianAgentic provides dynamic basin-scale intelligence that supports safer, more efficient, and more sustainable SWD operations.
+This closed-loop architecture transforms traditional reactive workflows into proactive, data-driven operational strategies. By continuously learning from new information, BasinAgentic delivers dynamic basin-scale intelligence that supports safer, more efficient, and more sustainable resource management.
 </p>
 
 <hr>
@@ -156,17 +162,27 @@ This closed-loop architecture transforms traditional reactive injection manageme
 <ul>
 <li>Transformer Time Series Forecasting</li>
 <li>Multi-Head Attention Networks</li>
-<li>Reinforcement Learning (RL) Optimization</li>
+<li>Reinforcement Learning Optimization</li>
 <li>Agentic AI Decision Systems</li>
-<li>Spatial b-Value Analytics</li>
-<li>GIS-Based Basin Intelligence</li>
+<li>Spatial Analytics & Geospatial Intelligence</li>
+<li>Basin-Scale Risk Assessment</li>
+<li>GIS-Based Operational Intelligence</li>
 <li>TensorFlow & Python Development Framework</li>
-<li>Real-Time Seismic Risk Monitoring</li>
-<li>Autonomous SWD Injection Control</li>
-<li>Google Colab Computing Environment</li>
-<li>GeoPandas & Spatial Analytics</li>
+<li>Real-Time Monitoring Systems</li>
+<li>Autonomous Operational Optimization</li>
+<li>GeoPandas & Spatial Data Science</li>
 <li>Advanced Data Visualization Tools</li>
+<li>Cloud-Based Computing Infrastructure</li>
+<li>Data Engineering & Automation Pipelines</li>
 </ul>
+
+<hr>
+
+<h2>Scientific Foundation</h2>
+
+<p>
+BasinAgentic combines modern artificial intelligence, geoscience, reservoir engineering, operational analytics, and spatial intelligence into a unified decision-support framework. The platform is designed to support a wide range of subsurface applications including oil and gas operations, produced water management, geothermal systems, carbon storage projects, induced seismicity monitoring, and basin-scale resource optimization.
+</p>
 
 <div class="footer">
 © 2026 BasinAgentic — All Rights Reserved
@@ -176,3 +192,4 @@ This closed-loop architecture transforms traditional reactive injection manageme
 
 </body>
 </html>
+```
